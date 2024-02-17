@@ -3,13 +3,14 @@ import {Component} from 'react'
 import FaqItem from '../FaqItem'
 import './index.css'
 
+console.log('by KSD')
+
 class Faqs extends Component {
-  state = {isAnswerVisible: false, idList: []}
+  state = {idList: []}
 
   showFaq = id => {
     const {idList} = this.state
     this.setState({
-      isAnswerVisible: true,
       idList: [...idList, id],
     })
   }
@@ -17,13 +18,12 @@ class Faqs extends Component {
   hideFaq = hideId => {
     const {idList} = this.state
     const newList = idList.filter(id => id !== hideId)
-    this.setState({isAnswerVisible: false, idList: newList})
+    this.setState({idList: newList})
   }
 
   renderFaqItem = () => {
     const {faqsList} = this.props
-    const {isAnswerVisible, idList} = this.state
-    console.log(isAnswerVisible)
+    const {idList} = this.state
 
     return (
       <ul className="faq-item-list">

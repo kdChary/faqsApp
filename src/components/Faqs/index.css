@@ -15,12 +15,17 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* width: 80%; */
+  width: 80%;
   background-color: #ffffff;
   border: none;
   border-radius: 19px;
   padding: 11px;
   box-shadow: 0 4px 16px 0 #e4e7eb;
+}
+@media (min-width: 768px) {
+  .faqs-container {
+    width: 75%;
+  }
 }
 
 .faq-title {
